@@ -22,7 +22,8 @@ export default async function handler(req, res) {
     });
 
     res.setHeader('Content-Type', response.headers.get('content-type') || 'text/html');
-    const buffer = await response.buffer();
+    const arrayBuffer = await response.arrayBuffer();
+    const buffer = Buffer.from(arrayBuffer);
     res.status(response.status).send(buffer);
   } catch (error) {
     res.status(500).json({ error: error.message });
