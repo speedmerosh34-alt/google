@@ -1,12 +1,14 @@
 export default function Home() {
   return (
-    <div style={{ padding: '20px', fontFamily: 'Arial' }}>
-      <h1>Google Proxy</h1>
-      <p>The page should load through the proxy below:</p>
-      <iframe 
-        src="/api/proxy" 
-        style={{ width: '100%', height: '80vh', border: 'none' }}
-      />
-    </div>
-  );
+    <iframe 
+      src="https://www.google.com" 
+      style={{
+        width: '100%',
+        height: '100vh',
+        border: 'none',
+        margin: 0,
+        padding: 0
+      }}
+    />
+  )
 }
