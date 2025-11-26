@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <iframe 
-      src="https://www.google.com" 
+      src="/api/proxy" 
       style={{
         width: '100%',
         height: '100vh',
